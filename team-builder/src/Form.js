@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TeamForm(props) {
+export default function Form(props) {
   const { values, update, submit } = props
 
   const onChange = evt => {
