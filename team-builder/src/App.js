@@ -11,20 +11,23 @@ const initialFormValues = {
 
 function App() {
 
-  const [teamMembers, setTeamMembers] = useState([])
+  const [team, setTeam] = useState([])
 
   const [formValues, setFormValues] = useState(initialFormValues)
 
   const updateForm = (inputName, inputValue) => {
     setFormValues({...formValues, [inputName]: inputValue})
   }
-
+  
   const submitForm = () => {
-    const team = {
+    const teamMember = {
       name: formValues.name.trim(),
       email: formValues.email.trim(),
       role: formValues.role,
     }
+    team.push(teamMember)
+    setTeam(team)
+    console.log(team)
   }
 
   return (

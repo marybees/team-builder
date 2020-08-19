@@ -15,13 +15,9 @@ export default function Form(props) {
 
   return (
     <form className='form container' onSubmit={onSubmit}>
-      <div className='form-group submit'>
-        <h2>Add a Team Member</h2>
-        <button disabled={!values.name || !values.email || !values.role ? true : false}>submit</button>
-      </div>
 
       <div className='form-group inputs'>
-        <h4>General information</h4>
+        <h1>Add a Team Member</h1>
         <label>Name:&nbsp;
           <input
             value={values.name}
@@ -33,6 +29,9 @@ export default function Form(props) {
           />
         </label>
 
+        <br></br>
+        <br></br>
+
         <label>Email:&nbsp;
           <input
             value={values.email}
@@ -43,6 +42,9 @@ export default function Form(props) {
             type='email'
           />
         </label>
+
+        <br></br>
+        <br></br>
         
         <label>Role:&nbsp;
           <select onChange={onChange} value={values.role} name="role">
@@ -52,6 +54,14 @@ export default function Form(props) {
             <option value="designer">Designer</option>
           </select>
         </label>
+
+        <br></br>
+
+        <div className='form-group submit'>
+        <br></br>
+        <button disabled={!values.name || !values.email || !values.role ? true : false}>submit</button>
+      </div>
+
       </div>
     </form>
   )
